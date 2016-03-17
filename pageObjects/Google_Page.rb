@@ -1,6 +1,7 @@
 require 'rubygems'
 require 'selenium-webdriver'
 
+#Google Page Object class
 class Google_Page
   
   element = nil
