@@ -22,4 +22,8 @@ class Google_Page
     return element
   end
   
+  def button_Search(driver)
+    
+  end
+  
 end
