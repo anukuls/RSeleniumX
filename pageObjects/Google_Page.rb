@@ -3,6 +3,8 @@ require 'selenium-webdriver'
 
 class Google_Page
   
+  element = nil
+  
   def textfield_Search(driver)
     myWait = Selenium::WebDriver::Wait.new(:timeout => 30)
     myWait.until { driver.find_element(:name => "q") }
