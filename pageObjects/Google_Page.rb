@@ -5,8 +5,7 @@ class Google_Page
   
   element = nil
   
-  #Page object for text field search
-  #test commit for new project 
+  #Page object for text field search 
   #Description: 
   #Arguments:
   def textfield_Search(driver)
