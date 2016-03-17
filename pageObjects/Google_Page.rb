@@ -6,7 +6,7 @@ class Google_Page
   element = nil
   
   #Page object for text field search
-  #test commit
+  #test commit for new project
   def textfield_Search(driver)
     myWait = Selenium::WebDriver::Wait.new(:timeout => 30)
     myWait.until { driver.find_element(:name => "q") }
