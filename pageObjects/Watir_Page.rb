@@ -1,7 +1,7 @@
 require 'rubygems'
 require 'selenium-webdriver'
 
-#Google Page Object class
+#Google Page Object class for POC
 class Watir_Page
   
   def textfield_Watir(driver)
