@@ -1,14 +1,10 @@
 require 'rubygems'
 require 'selenium-webdriver'
 
-#Google Page Object class
 class Google_Page
   
   element = nil
-  
-  #Page object for text field search 
-  #Description: 
-  #Arguments:
+   
   def textfield_Search(driver)
     myWait = Selenium::WebDriver::Wait.new(:timeout => 30)
     myWait.until { driver.find_element(:name => "q") }
@@ -23,7 +19,16 @@ class Google_Page
   end
   
   def button_Search(driver)
+    myWait = Selenium::WebDriver::Wait.new(:timeout => 30)
+    myWait.until { driver.find_element(:name => "btnG") }
     
+    begin
+      element = driver.find_element(:name => "btnG")
+    rescue Exception => e
+      puts "Unable to locate Search button"
+    end
+    
+    return element
   end
   
 end
