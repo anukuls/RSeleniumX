@@ -7,7 +7,9 @@ module Google_Page
    
   def textfield_Search(driver)
     myWait = Selenium::WebDriver::Wait.new(:timeout => 30)
-    myWait.until { driver.find_element(:name => "q") }
+    #myWait.until { driver.find_element(:name => "q") }
+  myWait.until {driver.find_element(By.name("q"))}
+    puts "BBBB"
     
     begin
       element = driver.find_element(:name => "q")
