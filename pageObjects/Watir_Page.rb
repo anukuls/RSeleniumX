@@ -80,7 +80,13 @@ class Watir_Page
     myWait1.until { driver.find_element(:id => "entry_1000004") }
     
     begin
-      element = driver.find_element(:id => "entry_1000004")
+      #element = driver.find_element(:id => "entry_1000004").find_element(:value,"Chrome")
+      element =select_list.find_elements(:tag_name => "option")
+      element.each do|values|
+        if value.text == "Chrome"
+          return element
+        end
+      end
     rescue Exception => e
       puts "Unable to Dropdown"
     end    

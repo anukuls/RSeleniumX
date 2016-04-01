@@ -8,13 +8,27 @@ module Common_Actions
     include Google_Actions
     
   def self.openBrowser(browser)
-    #File file = new File("D:\\chromedriver.exe");
-    # System.setProperty("webdriver.chrome.driver", file.getAbsolutePath() );
-    #  WebDriver driver = new ChromeDriver();
+    brower_name = browser.downcase
     
-    driver = Selenium::WebDriver.for :firefox
-    
+    case brower_name
+      
+      when "chrome"
+        Selenium::WebDriver::Chrome.driver_path = "..//Drivers//chromedriver.exe"
+        driver = Selenium::WebDriver.for :chrome
+           
+      when "firefox"
+        driver = Selenium::WebDriver.for :firefox
+        
+      when "ie"
+         Selenium::WebDriver::IE.driver_path = "..//Drivers//IEDriverServer.exe"
+         driver = Selenium::WebDriver.for :ie
+         puts driver
+         
+    end
+    driver.manage.timeouts.implicit_wait = 300
+    driver.manage.window.maximize
     return driver
+    
   
   end
     

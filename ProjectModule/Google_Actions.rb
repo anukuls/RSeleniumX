@@ -9,7 +9,6 @@ module Google_Actions
   def googleSearch(driver,search_str)
     Google_Page.textfield_Search(driver).send_keys(search_str)
     Google_Page.button_Search(driver).click
-    puts "AAAAAAA"
         
   end
   

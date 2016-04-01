@@ -8,7 +8,7 @@ class Google_search
    
    def google_Search
      
-     driver = Common_Actions.openBrowser("firefox")
+     driver = Common_Actions.openBrowser("chrome")
      driver.navigate.to "http://www.google.com"
      Google_Actions.googleSearch(driver,"Selenium WebDriver")
    
