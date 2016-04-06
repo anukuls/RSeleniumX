@@ -7,9 +7,8 @@ module Google_Page
    
   def textfield_Search(driver)
     myWait = Selenium::WebDriver::Wait.new(:timeout => 30)
-    #myWait.until { driver.find_element(:name => "q") }
-  myWait.until {driver.find_element(By.name("q"))}
-    puts "BBBB"
+    myWait.until { driver.find_element(:name => "q") }
+    #myWait.until {driver.find_element(By.name("q"))}
     
     begin
       element = driver.find_element(:name => "q")
@@ -33,4 +32,19 @@ module Google_Page
     return element
   end
   
+  def link_Selenium(driver)
+    myWait = Selenium::WebDriver::Wait.new(:timeout => 30)
+    puts "0000000"
+    myWait.until { driver.find_element(:link_text,"Selenium WebDriver") }
+      puts "11111"
+      begin
+        element = driver.find_element(:link_text,"Selenium WebDriver")
+        puts "222222"
+      rescue Exception => e
+        puts "Unable to locate Selenium Webdriver link"
+      end
+      
+      return element
+  end
+ 
 end

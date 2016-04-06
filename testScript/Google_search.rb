@@ -1,14 +1,15 @@
 require 'rubygems'
 require 'selenium-webdriver'
 require "../utility/Common_Actions"
+require "test/unit"
 
 include ::Common_Actions
 
-class Google_search
+class Test_GoogleSearch < Test::Unit::TestCase
    
-   def google_Search
+   def test_googleSearch
      
-     driver = Common_Actions.openBrowser("chrome")
+     driver = Common_Actions.openBrowser("firefox")
      driver.navigate.to "http://www.google.com"
      Google_Actions.googleSearch(driver,"Selenium WebDriver")
    
@@ -16,5 +17,5 @@ class Google_search
 
 end
 
-gs = Google_search.new
-gs.google_Search
+#gs = Google_search.new
+#gs.google_Search
