@@ -1,7 +1,7 @@
 require 'rubygems'
 require 'selenium-webdriver'
-require "../pageObjects/Google_Page"
-require "../utility/Assertions"
+require "#{File.dirname(__FILE__)}/../pageObjects/Google_Page"
+require "#{File.dirname(__FILE__)}/../utility/Assertions"
 #require "test/unit"
 
 module Google_Actions

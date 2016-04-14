@@ -1,6 +1,6 @@
 require 'rubygems'
 require 'selenium-webdriver'
-require "../ProjectModule/Google_Actions"
+require "#{File.dirname(__FILE__)}/../ProjectModule/Google_Actions"
 
 
 module Common_Actions
