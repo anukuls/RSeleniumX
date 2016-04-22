@@ -25,6 +25,7 @@ module Common_Actions
          puts driver
          
     end
+    
     driver.manage.timeouts.implicit_wait = 300
     driver.manage.window.maximize
     return driver
