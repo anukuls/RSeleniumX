@@ -4,8 +4,9 @@ require "#{File.dirname(__FILE__)}/Excel_Utils"
 module TestData_Loader
   
   def loadTestData(class_obj)
-    puts "load test data..."
+    
     location = nil
+    
     #Meenakshi - Extracting classname 
     class_obj.instance_methods(false).map { |m| 
       location = class_obj.instance_method(m).source_location.first
@@ -14,7 +15,6 @@ module TestData_Loader
     dir_location = File.dirname(location)
     dir_name = dir_location.split("/").last
     path = getTestDataPath(dir_name)
-    puts "path is #{path.inspect}"
     excel = Excel_Utils.new(path, "Sheet1")
     return excel
   end

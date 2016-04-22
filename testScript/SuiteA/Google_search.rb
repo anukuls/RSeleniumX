@@ -15,11 +15,10 @@ class Test_GoogleSearch < Test::Unit::TestCase
      puts "url is #{url}"
      driver = Common_Actions.openBrowser("firefox")
      driver.navigate.to url
-     Google_Actions.googleSearch(driver,"Selenium WebDriver")
+     search_str = data.getCellData(self.class,"Search_String")
+     puts "search string is #{search_str}"
+     Google_Actions.googleSearch(driver,search_str)
    
    end 
 
 end
-
-#gs = Google_search.new
-#gs.google_Search

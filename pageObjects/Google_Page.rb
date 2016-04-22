@@ -34,12 +34,10 @@ module Google_Page
   
   def link_Selenium(driver)
     myWait = Selenium::WebDriver::Wait.new(:timeout => 30)
-    puts "0000000"
     myWait.until { driver.find_element(:link_text,"Selenium WebDriver") }
-      puts "11111"
       begin
         element = driver.find_element(:link_text,"Selenium WebDriver")
-        puts "222222"
+        
       rescue Exception => e
         puts "Unable to locate Selenium Webdriver link"
       end
